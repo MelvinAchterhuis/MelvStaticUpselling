@@ -21,6 +21,45 @@
     </card>
 
     <card>
+        <title>Display settings</title>
+        <title lang="de-DE">Display einstellungen</title>
+
+        <input-field type="single-select">
+            <name>elementConfig</name>
+            <require>true</require>
+            <label>Element</label>
+            <defaultValue>productSlider</defaultValue>
+            <options>
+                <option>
+                    <id>productSlider</id>
+                    <name>Product slider</name>
+                </option>
+                <option>
+                    <id>productBox</id>
+                    <name>Product box</name>
+                </option>
+            </options>
+        </input-field>
+
+        <input-field type="single-select">
+            <name>position</name>
+            <require>true</require>
+            <label>Position</label>
+            <defaultValue>bottom</defaultValue>
+            <options>
+                <option>
+                    <id>aside</id>
+                    <name>Sidebar</name>
+                </option>
+                <option>
+                    <id>bottom</id>
+                    <name>Bottom</name>
+                </option>
+            </options>
+        </input-field>
+    </card>
+
+    <card>
         <title>Slider settings</title>
         <title lang="de-DE">Slider einstellungen</title>
 

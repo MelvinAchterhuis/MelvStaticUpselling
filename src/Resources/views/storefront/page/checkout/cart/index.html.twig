@@ -1,10 +1,22 @@
 {% sw_extends '@Storefront/storefront/page/checkout/cart/index.html.twig' %}
 
+{% block page_checkout_aside_summary %}
+    {% set pluginConfig = config('MelvStaticUpselling.config') %}
+    {% if (pluginConfig.active) and (page.MelvStaticUpsellingProducts) and (pluginConfig.elementConfig == 'productSlider') and (pluginConfig.position == 'aside') %}
+        {% sw_include '@MelvStaticUpselling/plugin/melv-static-upselling-slider.html.twig' %}
+    {% elseif (pluginConfig.active) and (page.MelvStaticUpsellingProducts) and (pluginConfig.elementConfig == 'productBox') and (pluginConfig.position == 'aside') %}
+        {% sw_include '@MelvStaticUpselling/plugin/melv-static-upselling-box.html.twig' with { position: pluginConfig.position } %}
+    {% endif %}
+    {{ parent() }}
+{% endblock %}
+
 {% block page_checkout_main_content %}
     {{ parent() }}
 
     {% set pluginConfig = config('MelvStaticUpselling.config') %}
-    {% if pluginConfig.active and (page.MelvStaticUpsellingProducts) %}
-        {% sw_include '@MelvStaticUpselling/plugin/melv-static-upselling.html.twig' %}
+    {% if (pluginConfig.active) and (page.MelvStaticUpsellingProducts) and (pluginConfig.elementConfig == 'productSlider') and (pluginConfig.position == 'bottom') %}
+        {% sw_include '@MelvStaticUpselling/plugin/melv-static-upselling-slider.html.twig' %}
+    {% elseif (pluginConfig.active) and (page.MelvStaticUpsellingProducts) and (pluginConfig.elementConfig == 'productBox') and (pluginConfig.position == 'bottom') %}
+        {% sw_include '@MelvStaticUpselling/plugin/melv-static-upselling-box.html.twig' with { position: pluginConfig.position } %}
     {% endif %}
 {% endblock %}
