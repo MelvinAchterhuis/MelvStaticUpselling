@@ -1,0 +1,45 @@
+<div class="card checkout-static-upselling pt-4">
+    {% if 'MelvStaticUpselling.slider.title'|trans != '' %}
+        {% set upsellingSliderTitle = "MelvStaticUpselling.slider.title"|trans|sw_sanitize %}
+    {% endif %}
+
+    {% set config = {
+        'title': {
+            'value': upsellingSliderTitle ?: null
+        },
+        'border': {
+            'value': pluginConfig.showBorder
+        },
+        'rotate': {
+            'value': pluginConfig.rotate
+        },
+        'products': {
+            'value': page.MelvStaticUpsellingProducts
+        },
+        'boxLayout': {
+            'value': pluginConfig.boxLayout
+        },
+        'elMinWidth': {
+            'value': pluginConfig.elMinWidth ~ 'px'
+        },
+        'navigation': {
+            'value': pluginConfig.navigation
+        },
+        'displayMode': {
+            'value': 'contain'
+        },
+        'verticalAlign': {
+            'value': pluginConfig.verticalAlign
+        }
+    } %}
+
+    {% sw_include "@Storefront/storefront/element/cms-element-product-slider.html.twig" with {
+        sliderConfig: config,
+        element: {
+            'data': {
+                'products': page.MelvStaticUpsellingProducts
+            },
+            type: 'product-slider'
+        }
+    } only %}
+</div>

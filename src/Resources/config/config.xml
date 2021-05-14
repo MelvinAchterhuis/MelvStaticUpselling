@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/shopware/platform/master/src/Core/System/SystemConfig/Schema/config.xsd">
+
+    <card>
+        <title>Static Upselling</title>
+        <title lang="de-DE">Static Upselling</title>
+
+        <input-field type="bool">
+            <name>active</name>
+            <require>true</require>
+            <label>Active</label>
+            <defaulValue>false</defaulValue>
+        </input-field>
+
+        <component name="sw-entity-multi-id-select">
+            <name>products</name>
+            <entity>product</entity>
+            <label>Choose active product(s) for static upselling</label>
+        </component>
+    </card>
+
+    <card>
+        <title>Slider settings</title>
+        <title lang="de-DE">Slider einstellungen</title>
+
+        <input-field type="text">
+            <name>title</name>
+            <label>Title</label>
+            <placeholder>Title can be configured through snippet 'MelvStaticUpselling.slider.title'</placeholder>
+            <helpText>No title? You can clear the snippet</helpText>
+            <disabled>true</disabled>
+        </input-field>
+
+        <input-field type="bool">
+            <name>showBorder</name>
+            <require>true</require>
+            <label>Show border</label>
+            <defaultValue>false</defaultValue>
+        </input-field>
+
+        <input-field type="bool">
+            <name>rotate</name>
+            <require>true</require>
+            <label>Auto rotate</label>
+            <defaultValue>true</defaultValue>
+        </input-field>
+
+        <input-field type="single-select">
+            <name>boxLayout</name>
+            <require>true</require>
+            <label>Layout type</label>
+            <defaultValue>minimal</defaultValue>
+            <options>
+                <option>
+                    <id>standard</id>
+                    <name>Standard</name>
+                </option>
+                <option>
+                    <id>image</id>
+                    <name>Big image</name>
+                </option>
+                <option>
+                    <id>minimal</id>
+                    <name>Minimal content</name>
+                </option>
+            </options>
+        </input-field>
+
+        <input-field type="int">
+            <name>elMinWidth</name>
+            <label>Minimal width</label>
+            <helpText>For a optimal result choose a value between 150 and 300</helpText>
+            <defaultValue>150</defaultValue>
+        </input-field>
+
+        <input-field type="bool">
+            <name>navigation</name>
+            <require>true</require>
+            <label>Show navigation arrows</label>
+            <defaultValue>false</defaultValue>
+        </input-field>
+
+        <input-field type="single-select">
+            <name>verticalAlign</name>
+            <require>true</require>
+            <label>Vertical Align</label>
+            <defaultValue>center</defaultValue>
+            <options>
+                <option>
+                    <id>top</id>
+                    <name>Top</name>
+                </option>
+                <option>
+                    <id>center</id>
+                    <name>Center</name>
+                </option>
+                <option>
+                    <id>bottom</id>
+                    <name>Bottom</name>
+                </option>
+            </options>
+        </input-field>
+
+    </card>
+</config>

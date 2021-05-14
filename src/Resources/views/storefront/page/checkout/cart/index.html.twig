@@ -1,0 +1,10 @@
+{% sw_extends '@Storefront/storefront/page/checkout/cart/index.html.twig' %}
+
+{% block page_checkout_main_content %}
+    {{ parent() }}
+
+    {% set pluginConfig = config('MelvStaticUpselling.config') %}
+    {% if pluginConfig.active and (page.MelvStaticUpsellingProducts) %}
+        {% sw_include '@MelvStaticUpselling/plugin/melv-static-upselling.html.twig' %}
+    {% endif %}
+{% endblock %}

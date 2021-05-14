@@ -1,0 +1,24 @@
+{
+    "name": "melvinachterhuis/static-upselling-shopware6-plugin",
+    "description": "Static upselling in the cart",
+    "version": "1.0.0",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Melvin Achterhuis"
+        }
+    ],
+    "type": "shopware-platform-plugin",
+    "autoload": {
+        "psr-4": {
+            "Melv\\StaticUpselling\\": "src/"
+        }
+    },
+    "extra": {
+        "shopware-plugin-class": "Melv\\StaticUpselling\\MelvStaticUpselling",
+        "label": {
+            "de-DE": "Static Upselling",
+            "en-GB": "Static Upselling"
+        }
+    }
+}
