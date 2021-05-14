@@ -1,5 +1,5 @@
 <div class="checkout-static-upselling row {% if position == 'bottom' %}pt-4{% endif %}">
-    {% if 'MelvStaticUpselling.slider.title'|trans != '' %}
+    {% if 'MelvStaticUpselling.title'|trans != '' %}
         <div class="col-12 cms-element-product-slider">
             <div class="cms-element-title">
                 <p class="cms-element-title-paragraph">{{ "MelvStaticUpselling.slider.title"|trans|sw_sanitize }}</p>
@@ -7,7 +7,7 @@
         </div>
     {% endif %}
     {% for product in page.MelvStaticUpsellingProducts %}
-        <div class="col-12 {% if position == 'bottom' %}col-md-6{% endif%} pb-4">
+        <div class="col-12 {{ productColumns }} pb-4">
             {% block element_product_listing_box %}
                 {% sw_include '@Storefront/storefront/component/product/card/box.html.twig' with {
                     'layout': 'minimal',

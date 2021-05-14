@@ -57,19 +57,19 @@
                 </option>
             </options>
         </input-field>
-    </card>
-
-    <card>
-        <title>Slider settings</title>
-        <title lang="de-DE">Slider einstellungen</title>
 
         <input-field type="text">
             <name>title</name>
             <label>Title</label>
-            <placeholder>Title can be configured through snippet 'MelvStaticUpselling.slider.title'</placeholder>
+            <placeholder>Title can be configured through snippet 'MelvStaticUpselling.title'</placeholder>
             <helpText>No title? You can clear the snippet</helpText>
             <disabled>true</disabled>
         </input-field>
+    </card>
+
+    <card>
+        <title>Product slider settings</title>
+        <title lang="de-DE">Produkt slider einstellungen</title>
 
         <input-field type="bool">
             <name>showBorder</name>
@@ -140,6 +140,35 @@
                 </option>
             </options>
         </input-field>
+    </card>
 
+    <card>
+        <title>Product box settings</title>
+        <title lang="de-DE">Product box einstellungen</title>
+
+        <input-field type="single-select">
+            <name>productColumns</name>
+            <require>true</require>
+            <label>How many products next to each other?</label>
+            <defaultValue>4</defaultValue>
+            <options>
+                <option>
+                    <id>col-md-12</id>
+                    <name>1</name>
+                </option>
+                <option>
+                    <id>col-md-6</id>
+                    <name>2</name>
+                </option>
+                <option>
+                    <id>col-md-4</id>
+                    <name>3</name>
+                </option>
+                <option>
+                    <id>col-md-3</id>
+                    <name>4</name>
+                </option>
+            </options>
+        </input-field>
     </card>
 </config>

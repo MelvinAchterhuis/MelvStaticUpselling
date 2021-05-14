@@ -5,7 +5,7 @@
     {% if (pluginConfig.active) and (page.MelvStaticUpsellingProducts) and (pluginConfig.elementConfig == 'productSlider') and (pluginConfig.position == 'aside') %}
         {% sw_include '@MelvStaticUpselling/plugin/melv-static-upselling-slider.html.twig' %}
     {% elseif (pluginConfig.active) and (page.MelvStaticUpsellingProducts) and (pluginConfig.elementConfig == 'productBox') and (pluginConfig.position == 'aside') %}
-        {% sw_include '@MelvStaticUpselling/plugin/melv-static-upselling-box.html.twig' with { position: pluginConfig.position } %}
+        {% sw_include '@MelvStaticUpselling/plugin/melv-static-upselling-box.html.twig' with { position: pluginConfig.position, productColumns: pluginConfig.productColumns } %}
     {% endif %}
     {{ parent() }}
 {% endblock %}
@@ -17,6 +17,6 @@
     {% if (pluginConfig.active) and (page.MelvStaticUpsellingProducts) and (pluginConfig.elementConfig == 'productSlider') and (pluginConfig.position == 'bottom') %}
         {% sw_include '@MelvStaticUpselling/plugin/melv-static-upselling-slider.html.twig' %}
     {% elseif (pluginConfig.active) and (page.MelvStaticUpsellingProducts) and (pluginConfig.elementConfig == 'productBox') and (pluginConfig.position == 'bottom') %}
-        {% sw_include '@MelvStaticUpselling/plugin/melv-static-upselling-box.html.twig' with { position: pluginConfig.position } %}
+        {% sw_include '@MelvStaticUpselling/plugin/melv-static-upselling-box.html.twig' with { position: pluginConfig.position, productColumns: pluginConfig.productColumns } %}
     {% endif %}
 {% endblock %}

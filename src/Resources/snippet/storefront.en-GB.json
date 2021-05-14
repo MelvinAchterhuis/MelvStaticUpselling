@@ -1,7 +1,5 @@
 {
     "MelvStaticUpselling": {
-        "slider": {
-            "title": "Also interesting for you"
-        }
+        "title": "Also interesting for you"
     }
 }
