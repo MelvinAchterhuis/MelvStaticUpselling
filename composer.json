@@ -8,6 +8,11 @@
             "name": "Melvin Achterhuis"
         }
     ],
+    "require": {
+        "shopware/core": "6.4.*",
+        "shopware/storefront": "6.4.*",
+        "shopware/administration": "6.4.*"
+    },
     "type": "shopware-platform-plugin",
     "autoload": {
         "psr-4": {
@@ -19,6 +24,10 @@
         "label": {
             "de-DE": "Static Upselling",
             "en-GB": "Static Upselling"
+        },
+        "description": {
+            "de-DE": "Statischer Upselling-Schieberegler im Warenkorb",
+            "en-GB": "Static upselling slider in the cart "
         }
     }
 }
