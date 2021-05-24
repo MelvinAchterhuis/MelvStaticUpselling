@@ -2,7 +2,7 @@
     "name": "melvinachterhuis/static-upselling-shopware6-plugin",
     "description": "Static upselling in the cart",
     "version": "1.0.0",
-    "license": "proprietary",
+    "license": "MIT",
     "authors": [
         {
             "name": "Melvin Achterhuis"
