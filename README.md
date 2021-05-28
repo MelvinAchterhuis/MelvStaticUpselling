@@ -1,5 +1,7 @@
 ## A plugin for [Shopware 6](https://github.com/shopware/platform)
 
+Manually select products that you want to upsell in the cart
+
 ![](https://i.imgur.com/fvbKFfZ.png)
 
 ## Requirements
